@@ -1,259 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <title>Ahmad Alhindy</title>
-    <!--box icons-->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/11.0.2/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/11.0.2/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/11.0.2/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-<body>
-    <div class="warpper">
-        <div class="cover cover-left"></div>
-        <div class="cover cover-right"></div>
-
-
-        <div class="book">
-            <!--profile page-->
-            <div class="book-page page-left">
-                <div class="profile-page">
-                    <img src="/img/1.png" alt="">
-                    <h1>Ahmad Alhindy</h1>
-                    <h3>Master degree</h3>
-
-                    <div class="social-media">
-                        <a href="https://www.linkedin.com/in/alhindy" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://github.com/Ahmad-Alhindy" target="_blank"><i class='bx bxl-github'></i></a>
-
-                    </div>
-
-                    <p>Hi, I'm Ahmad Alhindy, currently a second-year student in Data Engineering in Mobile and Platform
-                        Technologies program.
-                        I am a husband and a father of twins, a daughter and a son, and I live in Sävsjö.
-                        My motto is to never give up and keep trying, because success will come eventually.
-                    </p>
-
-                    <div class="btn-box">
-                        <a href="/cv.pdf" download class="btn">Daownload CV</a>
-                        <a href="#" class="btn contact-me">Contact Me</a>
-
-                    </div>
-                </div>
-            </div>
-
-            <!--page 1 & page 2-->
-            <div class="book-page page-right turn" id="turn-1">
-                <!-- page1 (work experiance) -->
-                <div class="page-front">
-                    <h1 class="title">Work Experiance</h1>
-                    <div class="workeduc-box">
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bx-calendar'></i>2017-2018</span>
-                            <h3>Trellebore Wheels AB</h3>
-                            <p>CNC Operator, responsible for programming and operating multiple CNC machines.</p>
-                        </div>
-                        <br>
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bx-calendar'></i>2018-2023</span>
-                            <h3>Skruf Snus AB</h3>
-                            <p>Machine Operator, overseeing multiple stations and performing various tasks related to production and machinery maintenance.</p>
-                        </div>
-                        <br>
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bx-calendar'></i>2020---</span>
-                            <h3>Telepass/sävsjö kommun</h3>
-                            <p>Part-time Taxi Driver - Care Assistant, providing assistance and care for the elderly I still maintain alongside my studies</p>
-                        </div>
-                    </div> 
-                    <span class="number-page">1</span>
-                    <!-- next bottun -->
-                    <span class="nextprev-btn" data-page="turn-1">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
-
-                </div>
-
-                <!-- page2 (Education) -->
-                <div class="page-back">
-                    <h1 class="title">Education</h1>
-                    <div class="workeduc-box">
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bx-calendar'></i>2016-2017</span>
-                            <h3>High school</h3>
-                            <p>CNC programering</p>
-                        </div><br>
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bx-calendar'></i>2023-2026</span>
-                            <h3>Data Engineering in Mobile and Platform</h3>
-                            <p>Object-oriented programming, web development, databases, several different programming languages, and likely more to come over time.</p>
-                        </div>
-                    </div>
-
-                    <span class="number-page">2</span>
-
-                    <!-- prev bottun -->
-                    <span class="nextprev-btn back" data-page="turn-1">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
-                </div>
-            </div>
-            <!--page 3 & page 4-->
-            <div class="book-page page-right turn" id="turn-2">
-
-                <!-- page 3 (my services) -->
-                <div class="page-front">
-                    <h1 class="title">My Skills</h1>
-
-                    <div class="services-box">
-                        <div class="services-content">
-                            <i class="bx bx-code-alt"></i>
-                            <h3>Web Development</h3>
-                            <p>I believe web development is truly amazing.</p>
-                            <p style="display:none;" class="hidd">It requires someone who is passionate, patient, and willing to 
-                                invest time to create exceptional web designs.</p>
-                            <a href="javascript:void(0);" class="btn" onclick="toggleContent(event)">Read More</a>
-                        </div>
-                        <div class="services-content">
-                            <i class="bx bx-calendar"></i>
-                            <h3>Planning</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p style="display:none;" class="hidd">It requires someone who is passionate, patient, and willing to 
-                                invest time to create exceptional web designs.</p>
-                            <a href="javascript:void(0)" class="btn" onclick="toggleContent(event)">Read More</a>
-                        </div>
-                        <div class="services-content">
-                            <i class='bx bx-envelope' ></i>
-                            <h3>Communication</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p style="display:none;" class="hidd">It requires someone who is passionate, patient, and willing to 
-                                invest time to create exceptional web designs.</p>
-                            <a href="javascript:void(0)" class="btn" onclick="toggleContent(event)">Read More</a>
-                        </div>
-                        <div class="services-content">
-                            <i class="bx bx-search-alt"></i>
-                            <h3>Curiosity</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p style="display:none;" class="hidd">It requires someone who is passionate, patient, and willing to 
-                                invest time to create exceptional web designs.</p>
-                            <a href="javascript:void(0)" class="btn" onclick="toggleContent(event)">Read More</a>
-                        </div>
-                    </div>
-
-                    <span class="number-page">3</span>
-                    <!-- next bottun -->
-                    <span class="nextprev-btn" data-page="turn-2">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-
-                <!-- page 4 (my skills) -->
-                <div class="page-back">
-                    <h1 class="title">programering languages</h1>
-                    <div class="siklls-box">
-
-                        <div class="skills-content">
-                            <h3>Front End</h3>
-                            <div class="content">
-                                <span><i class='bx bxl-html5'></i>HTML</span>
-                                <span><i class='bx bxl-css3'></i></i>CSS</span>
-                                <span><i class='bx bxs-file-js'></i>JS</span>
-                            </div>
-                        </div><br>
-                        <div class="skills-content">
-                            <h3>Back-End</h3>
-                            <div class="content">
-                                <span><i class='bx bxl-java' ></i>JAVA</span>
-                                <span><i class='bx bxl-python' ></i>PAYTHON</span>
-                                <span><i class='bx bxs-file-js'></i>JS</span>
-                                <span><i class='bx bxl-c-plus-plus' ></i>C++</span>
-                                <span><i class='bx bxl-android' ></i>KOTLIN</span>
-                                <span><i class='bx bxl-apple'></i>Swift</span>
-                            </div>
-                        </div><br>
-
-                        <div class="skills-content">
-                            <h3>UI/UX DISIGN</h3>
-                            <div class="content">
-                                <span class="jet"><i class='bx bxl-android' ></i>Jetpack Compose</span>
-                            </div>
-                        </div>
-                    </div>
-                    <span class="number-page">4</span>
-
-                    <!-- prev bottun -->
-                    <span class="nextprev-btn back" data-page="turn-2">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
-                </div>
-            </div>
-            <!--page 5 & page 6-->
-            <div class="book-page page-right turn" id="turn-3">
-                <!-- page 5 latest project or my portofolio -->
-                <!-- <div class="page-front">
-                    <h1 class="title">projects</h1>
-                    <div class="portfolio-box">
-                        <div class="img-box">
-                            <img src="/img/2.png" alt="">
-                        </div>
-
-                       <div class="info-box">
-                            <div class="info-title">
-                                <h3>Project Name</h3>
-                                <a href="#">Live Preview<i class='bx bx-link-external'></i></a>
-                            </div>
-                            <p>Tech used</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit tenetur,
-                                repellat consectetur, fugit Laudantium, cupiditate cumque. Nobis, iure</p>
-                        </div>
-
-                        <div class="btn-box">
-                            <a href="#" class="btn">ٍSorce Code</a>
-                            <a href="#" class="btn">More Projects</a>
-                        </div>
-
-                    </div>
-                    <span class="number-page">5</span>
-                     next bottun this line should be a commet ----------------------
-                    <span class="nextprev-btn" data-page="turn-3">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>-->
-
-
-
-                <!-- page 6 contact me-->
-                <div class="page-front">
-                    <h1 class="title">Contact Me!</h1>
-                    <div class="contact-box">
-                        <div class = contact-info>
-                            <ul > 
-                                <l  i><i class='bx bx-map'></i> Sävsjö, Sweden</li>
-                                <li><i class='bx bx-phone-call'></i> +46 72 430 4217</li>
-                                <li><i class='bx bx-envelope'></i> alhindy.se@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <span class="number-page">5</span>
-
-                    <!-- prev bottun -->
-                    <span class="nextprev-btn back" data-page="turn-3">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
-                    <a href="#" class="back-profile">
-                        <p>Profile</p>
-                        <i class='bx bxs-user'></i>
-
-                    </a>
-                </div>
-            </div>
-
-        </div>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h2>Welcome</h2>
+      <h1>Firebase Hosting Setup Complete</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
     </div>
+    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script src="/script.js"></script>
-</body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
 
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
 </html>
