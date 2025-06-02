@@ -460,6 +460,68 @@ body {
     margin: 0 1.15rem;
 }
 
+
+
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-wrapper .portfolio-box {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+
+.portfolio-nav {
+    position: absolute;
+    padding-left: 10%;
+    top: 55%;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.portfolio-prev,
+.portfolio-next {
+    background: var(--main-color);
+    color: var(--bg-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1.2rem;
+    pointer-events: all;
+    opacity: 0.7;
+}
+
+.portfolio-prev:hover,
+.portfolio-next:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.portfolio-prev {
+    margin-left: -3rem;
+}
+
+.portfolio-next {
+    margin-right: -3rem;
+}
+
+
+
+/*------------------------------------------*/
 .contact-box {
     display: flex;
     text-align: center;
@@ -560,60 +622,3 @@ body {
 }
 
 
-
-.portfolio-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.portfolio-wrapper .portfolio-box {
-    min-width: 100%;
-    flex-shrink: 0;
-}
-
-.portfolio-nav {
-    position: absolute;
-    padding-left: 10%;
-    top: 55%;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-    transform: translateY(-50%);
-}
-
-.portfolio-prev,
-.portfolio-next {
-    background: var(--main-color);
-    color: var(--bg-color);
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.3s ease;
-    font-size: 1.2rem;
-    pointer-events: all;
-    opacity: 0.7;
-}
-
-.portfolio-prev:hover,
-.portfolio-next:hover {
-    opacity: 1;
-    transform: scale(1.1);
-}
-
-.portfolio-prev {
-    margin-left: -3rem;
-}
-
-.portfolio-next {
-    margin-right: -3rem;
-}
