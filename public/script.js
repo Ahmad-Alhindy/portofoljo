@@ -130,3 +130,54 @@ function toggleContent(event) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.getElementById('portfolioWrapper');
+    const prevBtn = document.getElementById('portfolioPrev');
+    const nextBtn = document.getElementById('portfolioNext');
+    const projects = document.querySelectorAll('.portfolio-wrapper .portfolio-box');
+    
+    let currentProject = 0;
+    const totalProjects = projects.length;
+
+    function updatePortfolioDisplay() {
+        // Hide all projects
+        projects.forEach((project, index) => {
+            if (index === currentProject) {
+                project.style.display = 'block';
+                project.style.opacity = '1';
+            } else {
+                project.style.display = 'none';
+                project.style.opacity = '0';
+            }
+        });
+        
+        // Update button visibility
+        prevBtn.style.opacity = currentProject === 0 ? '0.3' : '0.7';
+        nextBtn.style.opacity = currentProject === totalProjects - 1 ? '0.3' : '0.7';
+        
+        // Disable/enable buttons
+        prevBtn.style.pointerEvents = currentProject === 0 ? 'none' : 'auto';
+        nextBtn.style.pointerEvents = currentProject === totalProjects - 1 ? 'none' : 'auto';
+    }
+
+    function nextProject() {
+        if (currentProject < totalProjects - 1) {
+            currentProject++;
+            updatePortfolioDisplay();
+        }
+    }
+
+    function prevProject() {
+        if (currentProject > 0) {
+            currentProject--;
+            updatePortfolioDisplay();
+        }
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', nextProject);
+    prevBtn.addEventListener('click', prevProject);
+
+    // Initialize display
+    updatePortfolioDisplay();
+});

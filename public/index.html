@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="
+    style.css">
     <title>Ahmad Alhindy</title>
     <!--box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -20,7 +21,7 @@
             <!--profile page-->
             <div class="book-page page-left">
                 <div class="profile-page">
-                    <img src="/img/1.png" alt="">
+                    <img src="img/1.png" alt="">
                     <h1>Ahmad Alhindy</h1>
                     <h3>Software engineering</h3>
 
@@ -197,40 +198,92 @@
             <!--page 5 & page 6-->
             <div class="book-page page-right turn" id="turn-3">
                 <!-- page 5 latest project or my portofolio -->
-                <!-- <div class="page-front">
+                <div class="page-front">
                     <h1 class="title">projects</h1>
-                    <div class="portfolio-box">
-                        <div class="img-box">
-                            <img src="/img/2.png" alt="">
-                        </div>
-
-                       <div class="info-box">
-                            <div class="info-title">
-                                <h3>Project Name</h3>
-                                <a href="#">Live Preview<i class='bx bx-link-external'></i></a>
+                    <!-- Replace your single portfolio-box with this structure -->
+                    <div class="portfolio-container">
+                        <div class="portfolio-wrapper" id="portfolioWrapper">
+                            <!-- Project 1 -->
+                            <div class="portfolio-box">
+                                <div class="img-box">
+                                    <img class = "calander1" src="img/calander1.png" alt="">
+                                    <img class = "calander2" src="img/calander2.png" alt="">
+                                    <img class = "calander3" src="img/calander3.png" alt="">
+                                </div>
+                                <div class="info-box">
+                                    <div class="info-title">
+                                        <h3>E-Commerce Website</h3>
+                                    </div>
+                                    <p>React, Node.js, MongoDB</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit
+                                    </p>
+                                </div>
+                                <div class="btn-box">
+                                    <a href="#" class="btn">Source Code</a>
+                                    <a href="#" class="btn">More Projects</a>
+                                </div>
                             </div>
-                            <p>Tech used</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit tenetur,
-                                repellat consectetur, fugit Laudantium, cupiditate cumque. Nobis, iure</p>
-                        </div>
 
-                        <div class="btn-box">
-                            <a href="#" class="btn">ٍSorce Code</a>
-                            <a href="#" class="btn">More Projects</a>
-                        </div>
+                            <!-- Project 2 -->
+                            <div class="portfolio-box">
+                                <div class="img-box">
+                                    <img src="img/2.png" alt="">
+                                </div>
+                                <div class="info-box">
+                                    <div class="info-title">
+                                        <h3>Task Management App</h3>
+                                    </div>
+                                    <p>Vue.js, Firebase</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit
+                                    </p>
+                                </div>
+                                <div class="btn-box">
+                                    <a href="#" class="btn">Source Code</a>
+                                    <a href="#" class="btn">More Projects</a>
+                                </div>
+                            </div>
 
+                            <!-- Project 3 -->
+                            <div class="portfolio-box">
+                                <div class="img-box">
+                                    <img src="img/2.png" alt="">
+                                </div>
+                                <div class="info-box">
+                                    <div class="info-title">
+                                        <h3>Weather Dashboard</h3>
+                                    </div>
+                                    <p>JavaScript, API Integration</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit
+                                    </p>
+                                </div>
+                                <div class="btn-box">
+                                    <a href="#" class="btn">Source Code</a>
+                                    <a href="#" class="btn">More Projects</a>
+                                </div>
+                            </div>
+
+                            <!-- Add more projects as needed -->
+                        </div>
+                    </div>
+                    <div class="portfolio-nav">
+                        <span class="portfolio-prev" id="portfolioPrev">
+                            <i class='bx bx-chevron-left'></i>
+                        </span>
+                        <span class="portfolio-next" id="portfolioNext">
+                            <i class='bx bx-chevron-right'></i>
+                        </span>
                     </div>
                     <span class="number-page">5</span>
-                     next bottun this line should be a commet ----------------------
+                    <!--next bottun -->
                     <span class="nextprev-btn" data-page="turn-3">
                         <i class='bx bx-chevron-right'></i>
                     </span>
-                </div>-->
+                </div>
 
 
 
                 <!-- page 6 contact me-->
-                <div class="page-front">
+                <div class="page-back">
                     <h1 class="title">Contact Me!</h1>
                     <div class="contact-box">
                         <div class=contact-info>
@@ -241,7 +294,7 @@
                             </ul>
                         </div>
                     </div>
-                    <span class="number-page">5</span>
+                    <span class="number-page">6</span>
 
                     <!-- prev bottun -->
                     <span class="nextprev-btn back" data-page="turn-3">
@@ -258,7 +311,7 @@
         </div>
     </div>
 
-    <script src="/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
