@@ -378,10 +378,27 @@ body {
     color: var(--main-color);
 }
 
+
+/*------------------------------------------*/
+.portfolio-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-wrapper .portfolio-box {
+    max-width: 100%;
+    flex-shrink: 0;
+}
+
 .portfolio-box .img-box {
     display: flex;
-    width: 75%;
-    height: 15rem;
+    width: 100%;
+    height: 13rem;
     overflow: hidden;
 }
 
@@ -420,8 +437,8 @@ body {
 }
 
 .portfolio-box .info-box {
-    width: 74%;
-    margin: 4rem 0 3rem;
+    width: 100%;
+    margin: 4rem 0 0.6rem;
 }
 
 .portfolio-box .info-box .info-title {
@@ -435,52 +452,64 @@ body {
     font-size: 1.3rem;
 }
 
-.portfolio-box .info-box .info-title a {
-    display: flex;
-    align-items: center;
-    color: var(--main-color);
-}
-
-.portfolio-box .info-box .info-title a i {
-    margin-left: .3rem;
-}
-
 .portfolio-box .info-box p:nth-of-type(1) {
     font-weight: 600;
 }
 
+.discription {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
 .portfolio-box .btn-box {
-    width: 74%;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
 
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* dim background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 470px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.popup-content p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+.popup-content button {
+    background-color: red;
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 
 .portfolio-box .btn-box .btn {
     margin: 0 1.15rem;
 }
 
-
-
-.portfolio-container {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-wrapper {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.portfolio-wrapper .portfolio-box {
-    min-width: 100%;
-    flex-shrink: 0;
-}
-
 .portfolio-nav {
     position: absolute;
     padding-left: 10%;
-    top: 55%;
+    top: 50%;
     width: 70%;
     display: flex;
     justify-content: space-between;
@@ -620,5 +649,3 @@ body {
     transform: translateX(-50%) scale(1);
     top: -1.8rem
 }
-
-
