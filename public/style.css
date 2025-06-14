@@ -410,8 +410,9 @@ body {
     object-fit: cover;
     transition: all 0.3s ease;
 }
+
 .chess1 {
-    width: 50%;
+    width: 55%;
 }
 
 .portfolio-box .img-box .calander1 {
