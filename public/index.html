@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="
-    style.css">
+    <link rel="stylesheet" href=" style.css">
     <title>Ahmad Alhindy</title>
     <!--box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -226,72 +225,155 @@
                                 <div class="btn-box">
                                     <a href="https://github.com/Ahmad-Alhindy/planing-App.git" target="_blank"
                                         class="btn">Source Code</a>
-                                    <a href="#" class="btn" onclick="showPopup(event)">Read more</a>
+                                    <a href="#" class="btn" onclick="showPopup(event, 'calander')">Read more</a>
                                 </div>
-                            </div>
+                                <div id="popup-calander" class="popup">
+                                    <div class="popup-content">
+                                        <p>This Android planning app is designed to help users manage their time
+                                            efficiently
+                                            by combining flexibility, clarity, and ease of use. At its core, the app
+                                            allows
+                                            users to create and save custom templates for common tasks or appointments.
+                                            These templates can be reused multiple times, reducing the need for repeated
+                                            manual input when scheduling recurring events.</p>
+                                        <p>
+                                            The app offers both weekly and monthly calendar views, enabling users to get
+                                            a
+                                            clear overview of their short-term and long-term schedules. Each appointment
+                                            or
+                                            task can be added, or deleted with a simple and intuitive interface.
+                                        </p>
+                                        <p>
 
-                            <div id="popup" class="popup">
-                                <div class="popup-content">
-                                    <p>This Android planning app is designed to help users manage their time efficiently
-                                        by combining flexibility, clarity, and ease of use. At its core, the app allows
-                                        users to create and save custom templates for common tasks or appointments.
-                                        These templates can be reused multiple times, reducing the need for repeated
-                                        manual input when scheduling recurring events.</p>
-                                    <p>
-                                        The app offers both weekly and monthly calendar views, enabling users to get a
-                                        clear overview of their short-term and long-term schedules. Each appointment or
-                                        task can be added, or deleted with a simple and intuitive interface.
-                                    </p>
-                                    <p>
-
-                                        To enhance the user experience, the app includes support for light and dark
-                                        mode, adapting to user preferences and system settings. Users also receive
-                                        timely reminders — one 15 minutes before and another 1 day before each scheduled
-                                        event — helping them stay prepared and organized.
-                                    </p>
-                                    <p>
-                                        Whether you're planning work tasks, personal goals, or recurring activities,
-                                        this app provides a structured yet flexible environment for keeping track of
-                                        what matters most.</p>
-                                    <button onclick="closePopup()">Close</button>
+                                            To enhance the user experience, the app includes support for light and dark
+                                            mode, adapting to user preferences and system settings. Users also receive
+                                            timely reminders — one 15 minutes before and another 1 day before each
+                                            scheduled
+                                            event — helping them stay prepared and organized.
+                                        </p>
+                                        <p>
+                                            Whether you're planning work tasks, personal goals, or recurring activities,
+                                            this app provides a structured yet flexible environment for keeping track of
+                                            what matters most.</p>
+                                        <button onclick="closePopup('calander')">Close</button>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Project 2 -->
                             <div class="portfolio-box">
                                 <div class="img-box">
-                                    <img src="" alt="">
+                                    <img class="chess1" src="img/chess1.png" alt="">
+                                    <img class="chess" src="img/chess.png" alt="">
                                 </div>
                                 <div class="info-box">
                                     <div class="info-title">
-                                        <h3>Task Management App</h3>
+                                        <h3>Simple 2-Player Chess Game</h3>
                                     </div>
-                                    <p>Vue.js, Firebase</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit
+                                    <p>Java</p>
+                                    <p class="discription">
+                                        A basic chess game for two local players with standard piece movement.
+                                        Advanced rules like castling and promotion are excluded to keep it simple and
+                                        focused on core gameplay.
                                     </p>
                                 </div>
                                 <div class="btn-box">
                                     <a href="#" class="btn">Source Code</a>
-                                    <a href="#" class="btn">More Projects</a>
+                                    <a href="#" class="btn" onclick="showPopup(event, 'chess')">Read more</a>
+                                </div>
+                                <div id="popup-chess" class="popup">
+                                    <div class="popup-content">
+                                        <p>This is a basic chess game designed for two players to play locally on the
+                                            same
+                                            device.
+                                            It features a standard 8x8 board and supports basic movement rules for all
+                                            pieces,
+                                            allowing players to take turns entering moves. The focus of the project was
+                                            on
+                                            implementing
+                                            the core mechanics of chess, including turn management and piece validation.
+                                        </p>
+                                        <p>
+                                            To keep the project lightweight and beginner-friendly, advanced features
+                                            such as
+                                            castling,
+                                            en passant, pawn promotion, and check/checkmate detection are not included.
+                                            The game ends when one player captures the opponent's king.
+                                        </p>
+                                        <p>
+
+                                            This project demonstrates a clear understanding of game state management,
+                                            input handling, and rule-based logic implementation.
+                                        </p>
+                                        <button onclick="closePopup('chess')">Close</button>
+                                    </div>
                                 </div>
                             </div>
 
                             <!-- Project 3 -->
                             <div class="portfolio-box">
                                 <div class="img-box">
-                                    <img src="" alt="">
+                                    <img class="LLM" src="img/LLM.png" alt="">
+                                    <img class="LLM2" src="img/LLM2.png" alt="">
+
                                 </div>
                                 <div class="info-box">
                                     <div class="info-title">
                                         <h3>Weather Dashboard</h3>
                                     </div>
-                                    <p>JavaScript, API Integration</p>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi velit
+                                    <p>javascript, HTML, CSS, PAYTHON, RAG</p>
+                                    <p class="discription">A web-based AI tool designed to support circular construction
+                                        by assessing whether lighting products should be reused or discarded. Uses RAG
+                                        to search and extract relevant online content, then generate informed answers.
+                                        Built with Python backend and a responsive frontend in HTML, CSS, and
+                                        JavaScript.
                                     </p>
                                 </div>
                                 <div class="btn-box">
-                                    <a href="#" class="btn">Source Code</a>
-                                    <a href="#" class="btn">More Projects</a>
+                                    <a href="#" class="btn" onclick="showPopup(event, 'EndOfLife')">Read more</a>
+                                </div>
+                                <div id="popup-EndOfLife" class="popup">
+                                    <div class="popup-content">
+                                        <p>As part of a research project conducted at Jönköping University,
+                                            a web-based AI system was designed to support sustainable end-of-life (EoL)
+                                            management of construction products. The focus was on lighting fixtures,
+                                            aiming to determine whether such products should be reused or disposed of
+                                            based on context-specific information.
+                                        </p>
+                                        <p>
+                                            To keep the project lightweight and beginner-friendly, advanced features
+                                            such as
+                                            castlingThe core system employed a Retrieval-Augmented Generation (RAG)
+                                            architecture
+                                            that automatically retrieved relevant web content and academic sources in
+                                            real time.
+                                            A custom interface allowed users to submit natural language questions, which
+                                            were then
+                                            processed by a backend implemented in Python. The retrieved content was
+                                            parsed and analyzed to
+                                            provide evidence-based answers regarding reuse potential. A frontend was
+                                            developed using HTML, CSS,
+                                            and JavaScript to facilitate interaction.
+                                        </p>
+                                        <p> One technical limitation encountered was the inability to process
+                                            image-based documents, such as PDFs
+                                            containing visual elements. Despite this, the prototype successfully
+                                            demonstrated the ability to fetch
+                                            and filter relevant text-based data to generate responses.
+                                        </p>
+                                        <p>
+                                            The project contributed to research on circular construction by showcasing
+                                            how AI-driven tools can
+                                            support decision-making in real-world reuse scenarios. Key technologies
+                                            involved included RAG frameworks
+                                            for natural language processing, browser-based search functionality, and
+                                            modular Python backend development.
+                                            The system also highlighted the importance of interdisciplinary approaches
+                                            that combine technical
+                                            implementation with sustainability goals.
+                                        </p>
+                                        <button onclick="closePopup('EndOfLife')">Close</button>
+                                    </div>
                                 </div>
                             </div>
 

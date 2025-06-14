@@ -408,7 +408,10 @@ body {
 
 .portfolio-box .img-box img {
     object-fit: cover;
-    transition: 35 ease;
+    transition: all 0.3s ease;
+}
+.chess1 {
+    width: 50%;
 }
 
 .portfolio-box .img-box .calander1 {
@@ -431,6 +434,8 @@ body {
     height: -webkit-fill-available;
     object-fit: fill;
 }
+
+
 
 .portfolio-box .img-box:hover img {
     transform: scale(1.1);
@@ -460,6 +465,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
     color: var(--text-color);
+    height: 7.7rem;
 }
 
 .portfolio-box .btn-box {
@@ -488,13 +494,17 @@ body {
     border-radius: 8px;
     text-align: center;
     max-width: 470px;
+    max-height: 80vh;
+    overflow-y: auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .popup-content p {
     margin-bottom: 15px;
     font-size: 0.9rem;
     color: var(--text-color);
 }
+
 .popup-content button {
     background-color: red;
     margin-top: 10px;

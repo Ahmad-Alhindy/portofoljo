@@ -112,7 +112,7 @@ function toggleContent(event) {
     const btn = event.target
     const content = btn.closest('.services-content');
     const hiddenParagraph = content.querySelector('.hidd');
-  if (content.style.position !== 'absolute') {
+    if (content.style.position !== 'absolute') {
         content.style.position = 'absolute';  // Remove it from document flow
         content.style.zIndex = '50';          // Bring it to the front
         content.style.width = '205px';        // Adjust width
@@ -130,12 +130,12 @@ function toggleContent(event) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const wrapper = document.getElementById('portfolioWrapper');
     const prevBtn = document.getElementById('portfolioPrev');
     const nextBtn = document.getElementById('portfolioNext');
     const projects = document.querySelectorAll('.portfolio-wrapper .portfolio-box');
-    
+
     let currentProject = 0;
     const totalProjects = projects.length;
 
@@ -150,11 +150,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 project.style.opacity = '0';
             }
         });
-        
+
         // Update button visibility
         prevBtn.style.opacity = currentProject === 0 ? '0.3' : '0.7';
         nextBtn.style.opacity = currentProject === totalProjects - 1 ? '0.3' : '0.7';
-        
+
         // Disable/enable buttons
         prevBtn.style.pointerEvents = currentProject === 0 ? 'none' : 'auto';
         nextBtn.style.pointerEvents = currentProject === totalProjects - 1 ? 'none' : 'auto';
@@ -183,11 +183,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-   function showPopup(event) {
+function showPopup(event, projectId) {
     event.preventDefault();
-    document.getElementById("popup").style.display = "flex";
-  }
+    document.getElementById(`popup-${projectId}`).style.display = "flex";
+}
 
-  function closePopup() {
-    document.getElementById("popup").style.display = "none";
-  }
+function closePopup(projectId) {
+    document.getElementById(`popup-${projectId}`).style.display = "none";
+}
+
+// Close popup when clicking outside the content
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('popup')) {
+        event.target.style.display = 'none';
+    }
+});
